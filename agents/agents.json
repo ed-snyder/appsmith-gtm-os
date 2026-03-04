@@ -1,0 +1,64 @@
+{
+  "agents": [
+    {
+      "id": "signup-welcomer",
+      "name": "Signup Welcome Agent",
+      "description": "Monitors new free signups, enriches them, scores them, and sends personalized welcome + onboarding sequences",
+      "trigger": "new_signup",
+      "playbook": "signup-welcome.md",
+      "tools": ["clay", "hubspot", "email"],
+      "autonomy_level": "full_auto",
+      "status": "active"
+    },
+    {
+      "id": "pql-hunter",
+      "name": "Product-Qualified Lead Hunter",
+      "description": "Monitors product usage signals (apps created, API connections, user invites) and triggers outreach when accounts hit PQL thresholds",
+      "trigger": "pql_threshold",
+      "playbook": "pql-outreach.md",
+      "tools": ["hubspot", "product-analytics", "email", "linkedin"],
+      "autonomy_level": "human_in_loop",
+      "status": "active"
+    },
+    {
+      "id": "trial-nudger",
+      "name": "Trial Nurture Agent",
+      "description": "Tracks trial users (Business plan 15-day trial), sends usage-based nudges, and escalates to sales when engagement is high",
+      "trigger": "trial_started",
+      "playbook": "trial-nurture.md",
+      "tools": ["hubspot", "email", "slack"],
+      "autonomy_level": "full_auto",
+      "status": "active"
+    },
+    {
+      "id": "expansion-spotter",
+      "name": "Expansion Opportunity Agent",
+      "description": "Monitors existing customers for expansion signals (new workspaces, user growth approaching tier limits, new use cases)",
+      "trigger": "expansion_signal",
+      "playbook": "expansion-outreach.md",
+      "tools": ["hubspot", "product-analytics", "email"],
+      "autonomy_level": "human_in_loop",
+      "status": "draft"
+    },
+    {
+      "id": "reactivation-agent",
+      "name": "Churned User Reactivation Agent",
+      "description": "Identifies users who stopped using Appsmith and sends re-engagement sequences based on their last activity and new features released since",
+      "trigger": "inactivity_30d",
+      "playbook": "reactivation.md",
+      "tools": ["hubspot", "email"],
+      "autonomy_level": "full_auto",
+      "status": "draft"
+    },
+    {
+      "id": "agents-evangelist",
+      "name": "Appsmith Agents Cross-Sell Agent",
+      "description": "Identifies existing Appsmith customers who are good fits for Appsmith Agents based on their tech stack (Salesforce, Zendesk, Slack) and team composition",
+      "trigger": "agents_fit_score",
+      "playbook": "agents-cross-sell.md",
+      "tools": ["hubspot", "clay", "email", "linkedin"],
+      "autonomy_level": "human_in_loop",
+      "status": "draft"
+    }
+  ]
+}

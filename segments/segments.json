@@ -1,0 +1,79 @@
+{
+  "segments": [
+    {
+      "name": "retool-refugees",
+      "status": "active",
+      "criteria": {
+        "current_tool": "retool",
+        "pain": "cost-at-scale",
+        "signals": ["retool-mentioned-on-job-board", "pricing-page-visit"]
+      },
+      "estimated_volume": 5000,
+      "priority": "high",
+      "campaigns": ["retool-migration"],
+      "file": "retool-refugees.md"
+    },
+    {
+      "name": "internal-tool-sprawl",
+      "status": "active",
+      "criteria": {
+        "company_size": "200-1000",
+        "signals": ["multiple-internal-tools", "react-admin-repos", "engineering-hiring"]
+      },
+      "estimated_volume": 15000,
+      "priority": "high",
+      "campaigns": ["platform-consolidation"],
+      "file": "internal-tool-sprawl.md"
+    },
+    {
+      "name": "open-source-first",
+      "status": "active",
+      "criteria": {
+        "values": "open-source",
+        "signals": ["github-stars", "oss-contributions", "self-hosting-interest"]
+      },
+      "estimated_volume": 25000,
+      "priority": "medium",
+      "campaigns": ["community-to-business"],
+      "file": "open-source-first.md"
+    },
+    {
+      "name": "ai-agent-adopters",
+      "status": "active",
+      "criteria": {
+        "initiative": "enterprise-ai",
+        "tools": ["salesforce", "zendesk", "slack"],
+        "signals": ["ai-budget", "chatgpt-enterprise", "ai-job-postings"]
+      },
+      "estimated_volume": 10000,
+      "priority": "high",
+      "campaigns": ["agents-launch"],
+      "file": "ai-agent-adopters.md"
+    },
+    {
+      "name": "free-to-paid",
+      "status": "active",
+      "criteria": {
+        "current_plan": "free",
+        "usage": "approaching-limits",
+        "signals": ["5-users-reached", "multiple-apps", "api-heavy-usage"]
+      },
+      "estimated_volume": 0,
+      "priority": "high",
+      "campaigns": ["upgrade-nurture"],
+      "file": "free-to-paid.md"
+    },
+    {
+      "name": "compliance-driven",
+      "status": "draft",
+      "criteria": {
+        "trigger": "compliance-requirement",
+        "signals": ["soc2-prep", "hipaa-mention", "audit-log-search"]
+      },
+      "estimated_volume": 3000,
+      "priority": "medium",
+      "campaigns": [],
+      "file": "compliance-driven.md"
+    }
+  ]
+}

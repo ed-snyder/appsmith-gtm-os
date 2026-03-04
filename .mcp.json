@@ -1,0 +1,30 @@
+{
+  "connectors": {
+    "clay": {
+      "api_key": "",
+      "base_url": "https://api.clay.com/v3"
+    },
+    "exa": {
+      "api_key": ""
+    },
+    "crm": {
+      "type": "hubspot",
+      "api_key": ""
+    },
+    "sequencer": {
+      "type": "lemlist",
+      "api_key": ""
+    },
+    "enrichment": {
+      "type": "clearbit",
+      "api_key": ""
+    },
+    "slack": {
+      "webhook_url": ""
+    },
+    "calendar": {
+      "type": "google",
+      "credentials": ""
+    }
+  }
+}

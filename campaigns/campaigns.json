@@ -1,0 +1,34 @@
+{
+  "campaigns": [
+    {
+      "name": "retool-migration",
+      "status": "planning",
+      "segment": "retool-refugees",
+      "angles": ["stop-paying-retool-tax"],
+      "channels": ["email", "linkedin"],
+      "start_date": "",
+      "owner": "",
+      "folder": "retool-migration"
+    },
+    {
+      "name": "signup-nurture",
+      "status": "planning",
+      "segment": "free-to-paid",
+      "angles": ["youve-outgrown-free"],
+      "channels": ["email", "in-app"],
+      "start_date": "",
+      "owner": "signup-agent",
+      "folder": "signup-nurture"
+    },
+    {
+      "name": "agents-launch",
+      "status": "planning",
+      "segment": "ai-agent-adopters",
+      "angles": ["ai-that-knows-your-business"],
+      "channels": ["email", "linkedin", "webinar"],
+      "start_date": "",
+      "owner": "",
+      "folder": "agents-launch"
+    }
+  ]
+}

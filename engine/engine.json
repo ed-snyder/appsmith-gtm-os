@@ -1,0 +1,100 @@
+{
+  "stack": {
+    "crm": {
+      "tool": "hubspot",
+      "status": "not_connected",
+      "objects": ["contacts", "companies", "deals"],
+      "custom_properties": [
+        "icp_score",
+        "icp_tier",
+        "pql_score",
+        "pql_tier",
+        "engagement_score",
+        "primary_segment",
+        "enrichment_status",
+        "enrichment_source",
+        "tech_stack",
+        "funding_stage",
+        "agent_last_action",
+        "agent_last_action_date"
+      ]
+    },
+    "enrichment": {
+      "tool": "clay",
+      "status": "not_connected",
+      "tables": ["signup_enrichment", "company_enrichment"],
+      "waterfalls": {
+        "company": ["clearbit", "zoominfo", "linkedin"],
+        "person": ["clearbit", "linkedin", "hunter"]
+      }
+    },
+    "sequencer": {
+      "tool": "lemlist",
+      "status": "not_connected",
+      "sender_accounts": [],
+      "active_campaigns": [],
+      "warmup_status": "not_started"
+    },
+    "analytics": {
+      "tool": "tbd",
+      "status": "not_connected",
+      "events_tracked": [
+        "app_created",
+        "data_source_connected",
+        "team_member_invited",
+        "feature_used",
+        "login",
+        "api_query"
+      ]
+    },
+    "call_recording": {
+      "tool": "gong",
+      "status": "not_connected",
+      "alternatives": ["fireflies"]
+    },
+    "search": {
+      "tool": "exa",
+      "status": "not_connected",
+      "use_cases": ["competitor_detection", "hiring_signals", "news_monitoring"]
+    },
+    "notifications": {
+      "tool": "slack",
+      "status": "not_connected",
+      "channels": {
+        "tier_a_alerts": "",
+        "pql_alerts": "",
+        "agent_activity": ""
+      }
+    },
+    "calendar": {
+      "tool": "google_calendar",
+      "status": "not_connected"
+    },
+    "ai": {
+      "tool": "anthropic_claude",
+      "status": "not_connected",
+      "use_cases": [
+        "email_personalization",
+        "call_analysis",
+        "lead_research",
+        "content_generation"
+      ]
+    }
+  },
+  "agents": {
+    "total": 6,
+    "active": 3,
+    "draft": 3,
+    "list": ["signup-welcomer", "pql-hunter", "trial-nudger", "expansion-spotter", "reactivation-agent", "agents-evangelist"]
+  },
+  "segments": {
+    "total": 6,
+    "active": 5,
+    "draft": 1
+  },
+  "campaigns": {
+    "total": 3,
+    "active": 0,
+    "planning": 3
+  }
+}
